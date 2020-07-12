@@ -7,6 +7,7 @@ letters = string.ascii_lowercase
 input1 = input("enter 'v' for vowels 'c'for consonents 'l' for any letters: ")
 input2 =input("enter 'v' for vowels 'c'for consonents 'l' for any letters: ")
 input3 = input("enter 'v' for vowels 'c'for consonents 'l' for any letters: ")
+input4 = input("enter 'v' for vowels 'c'for consonents 'l' for any letters: ")
 
 def generator():
     if input1 == 'v':
@@ -36,7 +37,16 @@ def generator():
     else:
              letter3= input3
 
-    name=letter1+letter2+letter3
+    if input4 == 'v':
+          letter4 = random.choice(vowels)
+    elif input4 == 'c':
+          letter4 = random.choice(consonents)
+    elif input4 == 'l':
+          letter4 = random.choice(letters)
+    else:
+          letter4= input4
+
+    name=letter1+letter2+letter3+letter4
     return(name)
 
 
